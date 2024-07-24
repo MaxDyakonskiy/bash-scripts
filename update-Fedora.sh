@@ -15,5 +15,12 @@ wait
 sudo fwupdmgr update
 wait
 
+# Uncomment it to update all pip packages at once.
+# This is really bad idea 'cause it can break
+# a multitude of Python modules and packages on your system.
+
+# echo '------- Python packages is updating -------'
+# pip list --outdated | cut -d ' ' -f 1 | tail -n +3 | xargs --interactive -d '\n' pip install -U
+
 exit 0
 
